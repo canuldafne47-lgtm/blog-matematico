@@ -8,9 +8,9 @@ const publicaciones = [
   },
   {
     id: "02demo",
-    titulo: "Engtrada chidoris",
+    titulo: "Factorización",
     archivo: "entradas/demo.js",
-    fecha: "2026-10-13",
-    resumen: "Mi primera entrada chidoris."
+    fecha: "2026-10-17",
+    resumen: "Factorización y sus métodos de resolución."
   }
 ];
