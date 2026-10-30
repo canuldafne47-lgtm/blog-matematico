@@ -20,5 +20,12 @@ const publicaciones = [
     fecha: "2026-10-20",
     resumen: "Más métodos de factorización y sus algoritmos de resolución."
   },
+   {
+    id: "04ecp",
+    titulo: "Ecuaciones de primer grado",
+    archivo: "entradas/Ecuacion_de_primer_grado.js",
+    fecha: "2026-10-29",
+    resumen: "ahora lo pongo"
+  },
 ];
 
