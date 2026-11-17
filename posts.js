@@ -25,7 +25,7 @@ const publicaciones = [
     titulo: "Ecuaciones de primer grado",
     archivo: "entradas/Ecuacion_de_primer_grado.js",
     fecha: "2026-10-29",
-    resumen: "ahora lo pongo"
+    resumen: "Ecuaciones de primer grado y sus algoritmos de resolución."
   },
 ];
 

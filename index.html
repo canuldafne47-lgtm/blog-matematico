@@ -4,13 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Matemático Interactivo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
     <style>
+        body { position: relative; overflow-x: hidden; }
+
+     .burbuja{
+      position: fixed;
+     bottom: -80px;
+     border-radius: 50%;
+     background: rgba(147, 168, 209, 0.22);
+     border: 1px solid rgba(147, 168, 209, 0.55);
+     animation: subir linear infinite;
+     z-index: -1;
+     pointer-events: none;
+     }
+     @keyframes subir {
+     from { transform: translateY(0); opacity: 0; }
+     10%  { opacity: 1; }
+     90%  { opacity: 1; }
+     to   { transform: translateY(-110vh) translateX(20px); opacity: 0; }
+    }
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            max-width: 700px;
-            margin: 20px auto;
-            padding: 10px;
-            color: #222;
+            font-family: 'Nunito', Arial, sans-serif;
+         max-width: 700px;
+         margin: 20px auto;
+         padding: 20px;
+         color: #222;
+         background: linear-gradient(160deg, #eef2f7, #f3eefc);
+         min-height: 100vh;
         }
 
         h1 {
@@ -42,8 +63,8 @@
         }
 
         #lista-entradas li {
-            background-color: #fafafa;
-            border: 1px solid #ddd;
+            background-color: #ede9fe;
+            border: 1px solid #8a9a6b;
             border-radius: 6px;
             padding: 15px;
             margin-bottom: 12px;
@@ -84,9 +105,9 @@
 
         /* Clases auxiliares para elementos interactivos */
         ul.interactivo {
-            background-color: #fafafa;
+            background-color: #ede9fe;
             padding: 15px 30px;
-            border: 1px solid #ddd;
+            border: 1px solid #8a9a6b;
         }
 
         ul.interactivo li {
@@ -110,7 +131,12 @@
     </style>
 </head>
 <body>
-
+       <div class="burbuja" style="left:6%;  width:28px; height:28px; animation-duration:9s;"></div>
+     <div class="burbuja" style="left:25%; width:46px; height:46px; animation-duration:13s; animation-delay:2s;"></div>
+     <div class="burbuja" style="left:50%; width:60px; height:60px; animation-duration:15s; animation-delay:4s;"></div>
+     <div class="burbuja" style="left:75%; width:32px; height:32px; animation-duration:10s;"></div>
+     <div class="burbuja" style="left:90%; width:50px; height:50px; animation-duration:14s; animation-delay:3s;"></div>
+ 
     <h1 id="titulo" onclick="cambiarColorTitulo()">Blog Matemático Interactivo</h1>
 
     <h2 class="subtitulo">Entradas del Blog</h2>
