@@ -108,7 +108,16 @@ function restar(A, B) {
  */
 function escalar(k, A) {
   // TODO Workshop 1
-  pendiente('escalar', 'Workshop 1');
+  //pendiente('escalar', 'Workshop 1');
+  const [filas, columnas] = orden(A);
+  const Resultante = crearMatriz(filas, columnas);
+  //Algoritmo para multiplicar de elemento a elemento
+  for (let f = 0; f < filas; f++) {
+    for (let c = 0; c < columnas; c++) {
+      Resultante[f][c] = k * A[f][c];
+    }
+  }
+  return Resultante;
 }
 
 /**
@@ -119,7 +128,16 @@ function escalar(k, A) {
  */
 function transpuesta(A) {
   // TODO Workshop 1
-  pendiente('transpuesta', 'Workshop 1');
+  //pendiente('transpuesta', 'Workshop 1');
+  const [filas, columnas] = orden(A);
+  const Resultante = crearMatriz(columnas, filas);
+  //Algoritmo para la transpuesta 
+  for (let f = 0; f < filas; f++) {
+    for (let c = 0; c < columnas; c++) {
+      Resultante[c][f] = A[f][c];
+    }
+  }
+  return Resultante;
 }
 
 
@@ -131,7 +149,14 @@ function transpuesta(A) {
 /** Determinante de una matriz 2 × 2:  ad − bc */
 function det2(T) {
   // TODO Workshop 2
-  pendiente('det2', 'Workshop 2');
+ // pendiente('det2', 'Workshop 2');
+  const a = T[0][0];
+  const b = T[0][1];
+  const c = T[1][0];
+  const d = T[1][1];
+
+  const determinante  = a * d - b * c;
+  return determinante;
 }
 
 /**
@@ -140,7 +165,20 @@ function det2(T) {
  */
 function transformar(x, y, T) {
   // TODO Workshop 2
-  pendiente('transformar', 'Workshop 2');
+  pendiente('Transformar', 'Workshop 2');
+}
+
+function determinante(A) {
+  // TODO Workshop 2
+ // pendiente('determinante', 'Workshop 2');
+ const[filas, columnas] = orden (A);
+ if (filas == 2 && columnas == 2) {
+  const determinate = det2(A);
+  return determinate;
+ }else {
+    pendiente('determinante', 'Workshop 2');
+ }
+
 }
 
 
@@ -172,3 +210,6 @@ function inversa2x2(T) {
   // TODO Workshop 4
   pendiente('inversa2x2', 'Workshop 4');
 }
+
+
+ 
